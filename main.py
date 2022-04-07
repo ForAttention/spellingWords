@@ -2,16 +2,15 @@ import win32com.client # pywin32
 # import docx
 import requests
 from bs4 import BeautifulSoup
-import lxml
 
-"""Nie sporządzej żadnej klasy pod to
+"""Nie sporządzam żadnej klasy pod to
 
 Kod jest bardzo niestabilny 
 Jak go testowałem to często się wysypywał 
 Być może dlateo że testowałem 450 stron (tematyka - czasopisma)
-i miałem z każdej średnio po 70 tyś stron A4 tesktu
+i miałem z każdej średnio po 70 tyś stron A4 tekstu
 
-Utworzę plik .docx z błędami, oraz przedstawię program do ściągania tekstu ze strony 
+Chciałbym pokazać, jak program z pliku docx sprawdza błędy, oraz jak można pobrać cały tekst ze strony 
 """
 
 
@@ -40,7 +39,7 @@ file.close()
 # trzeba by plik stuf1 przepisać do stuf2.docx, ale nie piszę tego jak na razie
 
 spelling = []
-
+# ten path_to_file_doc jest po prostu ścieżką do naszego pliku z dokumentem Microsoft
 path_to_file_doc = r"C:\sciezka\asd"
 num = 0
 wordapp = win32com.client.Dispatch("Word.Application")
@@ -54,3 +53,7 @@ if worddoc.SpellingErrors.Cout:
     num += 1
     worddoc.ActiveWindow.Close()
 
+"""
+Na ten moment nie mam nazędzi by napisać to dalej
+Myślę, że nie długo zrobię update gitaz kodem który mam przetestowany
+"""
