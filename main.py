@@ -7,8 +7,8 @@ from bs4 import BeautifulSoup
 
 Kod jest bardzo niestabilny 
 Jak go testowałem to często się wysypywał 
-Być może dlateo że testowałem 450 stron (tematyka - czasopisma)
-i miałem z każdej średnio po 70 tyś stron A4 tekstu
+Być może dlatego że testowałem 450 stron (tematyka - czasopisma)
+i miałem z każdej średnio po 700 tyś stron A4 tekstu
 
 Chciałbym pokazać, jak program z pliku docx sprawdza błędy, oraz jak można pobrać cały tekst ze strony 
 """
@@ -20,7 +20,7 @@ file = open("stuff1.txt", "w")
 requests = requests.get(url)
 data = BeautifulSoup(requests.text, "lxml")
 syntax = data.html.find_all("p")
-# tutaj możemy dodaćj już coś co nam oddzieil część tekstu od pozostałych części (podstron)
+# tutaj możemy dodać już coś co nam oddzieil część tekstu od pozostałych części (podstron)
 file.write(45*"=" + "\n" + url + "\n" + 45*"=")
 print("Zaczynamy wyciąganie tekstu")
 for text in syntax[:]:
@@ -55,5 +55,5 @@ if worddoc.SpellingErrors.Cout:
 
 """
 Na ten moment nie mam nazędzi by napisać to dalej
-Myślę, że nie długo zrobię update gitaz kodem który mam przetestowany
+Myślę, że nie długo zrobię update gita z kodem który mam przetestowany
 """
