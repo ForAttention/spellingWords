@@ -9,7 +9,7 @@ Program poprawia błędy ortograficzne jak i literówki, można by napisać, że
 
 ## O programie
 W programie na początku napisałem fragment kodu, który pobiera cały tekst z ```<p></p>```.
-W ten sposób mogłem sprawdzić tekst bezpośrednio ze strony, wczesniej jescze pobierałem wszystkie podstrony w taki sposób:
+W ten sposób mogłem sprawdzić tekst bezpośrednio ze strony, wczesniej jeszcze pobierałem wszystkie podstrony w taki sposób:
 ```python
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
@@ -32,7 +32,7 @@ for slash_link in find:
 
 """Teraz iterujemy wszystkie strony z listy all_site i z każdej pobieramy tekst
     Nie jest to oczywiście pełny kod, wykonuje się on raz dla podanej strony
-    Nie ma usalonych wyjątkowó, żeby nie zbierało facebooka oraz mailyo:xyz
+    Nie ma usalonych wyjątków, żeby nie zbierało facebooka oraz mailto:xyz
     I wykonywania tak długo aż nie znajdzie wszystkich
     Mam nadzieję że ten kod mi się przyda jeszcze w pracy ;)"""
 
@@ -42,7 +42,7 @@ for x in all_site:
 
 Tekst zapisałem w pliku o formacie .txt, nie od razu w pliku docx, na różnych maszynach występują czasem problemy ze zgodnością wersji więc jest to indywidualna sprawa każdego programisty.
 Dalsza część programu działa dość niestabilnie, klient COM od win32 wymaga sporo czasu na proces.
-Zauważyłem, że małe ilośći wyrazów (tak po 100) nie wywala programu, kiedy jednak jest ich ponad 700 tyśięcy to program nie działał prawidłowo
+Zauważyłem, że małe ilośći wyrazów (tak po 100) nie wywala programu, kiedy jednak jest ich ponad 700 tysięcy to program nie działał prawidłowo
 
 
 
